@@ -1,0 +1,21 @@
+% Muptiple choice question command
+\usepackage{pgffor}
+\usepackage{enumitem}
+\newcommand{\multiplechoice}[2]{
+    \noindent #1
+
+    \begin{enumerate}[label=\alph*., leftmargin=3em]
+    \foreach \x in {#2} {
+        \item \x
+    }
+    \end{enumerate}
+}
+
+% Open-ended question
+\newcommand{\openEnded}[1]{
+    \noindent\hangindent=1.5em\hangafter=1 #1
+    \vspace{1em}
+}
+
+% Applications
+\newcommand{\app}[1]{\textit{#1}}
